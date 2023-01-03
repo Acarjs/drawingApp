@@ -17,7 +17,6 @@ let restore_array = [];
 let index = -1;
 let undoList = [];
 let isPrevUndo = false;
-let newArray = [];
 
 canvas.addEventListener('mousedown', e => {
   isPressed = true;
@@ -35,7 +34,6 @@ canvas.addEventListener('mouseup', e => {
   restore_array.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
   index += 1;
   undo.disabled = false;
-  //   console.log(restore_array)
 });
 
 canvas.addEventListener('mousemove', e => {
